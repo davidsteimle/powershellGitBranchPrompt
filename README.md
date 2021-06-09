@@ -36,7 +36,7 @@ function prompt {
 }
 ```
 
-This will act of your current branch, if the code is in your ``$PROFILE``. Example:
+This will act on your current branch, if the code is in your ``$PROFILE``. Example:
 
 ```
 PS C:\Users\steimle\bin\onDemandToast (main)>git branch
