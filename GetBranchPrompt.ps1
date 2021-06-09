@@ -1,15 +1,12 @@
-function Get-Branch{
-    try{
-        $(git branch).ForEach(
-            {
-                if($PSItem -match "\*"){
-                    $Branch = $PSItem -replace "\* ",""
-                    $Branch
-                }
-            }
-        )
-    }catch{
-
+function Get-GitBranch{
+    if(Get-Item .git -Force -ErrorAction Ignore){
+        # this is a repo
+        $Query = git branch --show
+    } else {
+        # this is not a repo
+    }
+    if($Query){
+        " ($Query)"
     }
 }
 
