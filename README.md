@@ -28,7 +28,7 @@ function Get-MyPrompt{
 }
 ```
 
-Lastly, we run the native ``prompt`` command to change the prompt.
+Lastly, we modify the native ``prompt`` function to change the prompt.
 
 ```powershell
 function prompt {
