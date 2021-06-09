@@ -51,3 +51,14 @@ PS C:\Users\steimle\bin>
 ```
 
 Directory ``C:\Users\steimle\bin\onDemandToast`` is a repository, but ``C:\Users\steimle\bin`` is not. The error handling in ``Get-Branch``  prevents the prompt from trying to display a branch if no branch is present.
+
+Works on my Ubuntu server with pwsh7 as well:
+
+```
+PS /home/david/bin/update (main)>git branch       
+* main
+  test
+PS /home/david/bin/update (main)>git checkout test
+Switched to branch 'test'
+PS /home/david/bin/update (test)>
+```
