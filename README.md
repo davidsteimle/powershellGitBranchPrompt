@@ -4,6 +4,8 @@ Change your PowerShell prompt to note the current git branch.
 
 -----
 
+While the git bash console will display your current branch, I live in PowerShell, and wanted to have the same functionality. We will use ``git branch --show`` if the current directory has a ``.git`` directory (making it a potantial repository).
+
 First, we create a function to get your current branch (if any), and return it with parenthesis. The variable ``$Query`` is function scoped, so if the user already has a variable assigned it will not influence this functionality.
 
 ```powershell
@@ -20,6 +22,7 @@ function Get-GitBranch{
 }
 ```
 
+The ``-Force`` in the ``Get-Item`` command is required due to the "hidden" property of ``.git``.
 
 Next, we need to build the new prompt.
 
