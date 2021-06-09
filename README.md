@@ -2,7 +2,9 @@
 
 Change your PowerShell prompt to note the current git branch.
 
-First, we create a function to get your current branch (if any), and return it with parenthesis.
+-----
+
+First, we create a function to get your current branch (if any), and return it with parenthesis. The variable ``$Query`` is function scoped, so if the user already has a variable assigned it will not influence this functionality.
 
 ```powershell
 function Get-GitBranch{
